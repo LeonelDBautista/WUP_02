@@ -18,7 +18,10 @@ veggy <- cabbages
 
 <!--In this section you explain what you are trying to show.  Where did the data come from?  What is the research or other question you are trying to answer?!-->
  The cabbages data from the MASS package is loaded into a dataframe called veggy. Complete this report by answering the following two questions  
- 
+
+$H_0$ There is no difference in Vitamin C content between cultivation c39 and c52.
+$H_A$ There is a statistically significant amount of vitamin C in either cultivation c39 or c52.
+
 ### Is there a difference in average VitC between c39 and c52 cultivation methods?  
 
 # Methods
@@ -49,6 +52,10 @@ Per the boxplot, c39 75th percentile is below the 25th percentile of c52.
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+```{r}
+favstats(VitC~Cult,data=veggy)
+```
+The data shows that Q3 of c39 is smaller than the Q1 of c52 indicating that they are indeed disjoint.
 
 ## Inferential Results
 
